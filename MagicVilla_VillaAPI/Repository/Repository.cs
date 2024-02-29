@@ -39,7 +39,7 @@ namespace MagicVilla_VillaAPI.Repository
             return await query.FirstOrDefaultAsync();
         }
 
-        public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>> filter = null)
+        public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null)
         {
             IQueryable<T> query = dbSet;
 
@@ -60,12 +60,6 @@ namespace MagicVilla_VillaAPI.Repository
         public async Task SaveAsync()
         {
             await _db.SaveChangesAsync();
-        }
-
-        public async Task UpdateAsync(T entity)
-        {
-            dbSet.Update(entity);
-            await SaveAsync();
         }
     }
 }
