@@ -3,8 +3,7 @@ using MagicVilla_Web.Models;
 using MagicVilla_Web.Models.DTO;
 using MagicVilla_Web.Services.IServices;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using System.Reflection;
+using Newtonsoft.Json; 
 
 namespace MagicVilla_Web.Controllers
 {
