@@ -108,7 +108,7 @@ namespace MagicVilla_VillaAPI.Controllers
                 VillaNumber villaNumber = _mapper.Map<VillaNumber>(createDTO);
 
                 await _dbVillaNumber.CreateAsync(villaNumber);
-                _response.Result = _mapper.Map<VillaDTO>(villaNumber);
+                _response.Result = _mapper.Map<VillaNumberDTO>(villaNumber);
                 _response.StatusCode = HttpStatusCode.Created;
                 return CreatedAtRoute("GetVillaNumber", new { id = villaNumber.VillaNo }, _response);
             }
